@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Spectral:wght@400;800&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: white;
+  font-size: 14px;
+  line-height: 150%;
+  background-color: #efefef;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section,
+.row,
+.column {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  width: 100%;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+  font-style: italic;
+}
+
+.left,
+.right {
+  padding-right: 16px;
+  /* Ensures a gap between columns when side by side */
+}
+
+h1,
+h2 {
+  font-family: 'Spectral', serif;
+  font-size: 32px;
+  color: #3b75db;
+  /* Heading color */
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 20px;
+
+}
+
+.contact li {
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:inline-block;
+}
+
+.contact ul {
+    margin: 5px 0 5px 0;
+    padding-left: 0px;
+
+}
+
+.contact li,
+.contact a {
+  font-size: 14px;
+  margin-top: 12px;
+  margin-right: 12px;
+  color: #000;
+}
+
+.contact li i {
+  margin-right: 5px;
+  color: #000;
+  /* Icon color */
+}
+
+.about p {
+    margin: 0px;
+  }
+
+a {
+  text-decoration: underline;
+  color: #3b75db;
+}
+
+.experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 5px;
+}
+
+.experience h3 {
+  margin: 0;
+  font-weight: bold;
+  /* Make company name bold */
+  color: #000;
+  /* Heading color */
+}
+
+.experience .tenure {
+  margin: 0;
+  font-style: italic;
+  /* Make job period italic */
+}
+
+.job-title-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0px;
+}
+
+.job-title-location p {
+  margin: 0;
+}
+
+.experience-list {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.right ul {
+  list-style-type: circle;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.footer {
+  margin: 60px 14px 60px 14px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 80%;
+  opacity: 0.9;
+}
+
+/* Styles for A4 size display on larger screens */
+@media screen and (min-width: 768px) {
+  body {}
+
+  .container {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    padding: 8mm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .column {
+    float: left;
+  }
+
+  .left {
+    width: 75%;
+  }
+
+  .right {
+    width: 25%;
+    padding-right: 0px;
+    font-size: 13px;
+    line-height: 140%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .container {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    width: 100%;
+    margin-left: 10px;
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+  }
+
+  .left {
+    width: 75%;
+  }
+
+  .right {
+    width: 25%;
+    padding-right: 15px;
+    font-size: 13px;
+    line-height: 140%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .footer {
+    display: none;
+  }
+}
